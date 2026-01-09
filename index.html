@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>橘エステ</title>
+
+  <style>
+    .insta-icon {
+            /* アイコンの色とサイズ */
+            color: #E1306C; 
+            font-size: 50px;
+            
+            /* カーソルを指マークに変える設定 */
+            cursor: pointer;
+            
+            /* リンクとして自然に見せるための装飾 */
+            text-decoration: none;
+            transition: transform 0.2s; /* マウスを乗せた時の動きを滑らかにする */
+            display: inline-block;
+        }
+
+        /* マウスを乗せた（ホバー）時のエフェクト */
+        .insta-icon:hover {
+            transform: scale(1.1); /* 少し大きくする */
+            color: #C13584;       /* 少し色を濃くする */
+        }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      color: #333;
+      background: #fafafa;
+      line-height: 1.8;
+    }
+
+    /* ===== Header ===== */
+    header {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .slideshow img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+    }
+
+    .header-content {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px 16px;
+      border-radius: 14px;
+      z-index: 10;
+    }
+
+    .header-content img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 0.15em;
+    }
+
+    /* ===== Main ===== */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 0.2em;
+      margin: 80px 0 40px; /* 上下にゆとりを持たせました */
+    }
+
+    /* 最初のh2（MENU）だけ上の余白を調整 */
+    main h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-top: 50px;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    .menu-item {
+      margin-top: 24px;
+      background: #fff;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    }
+
+    .menu-item h4 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .menu-item small {
+      color: #777;
+    }
+
+    .price {
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    /* ===== Info Content ===== */
+    .info-content {
+      text-align: center;
+      font-size: 1.2rem;
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      margin-top: 100px;
+      padding: 40px 20px;
+      background: #222;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header { height: 55vh; }
+      .header-content h1 { font-size: 1.3rem; }
+      h2 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="slideshow">
+      <img src="beauty4.JPG" class="active" alt="橘エステ イメージ" />
+      <img src="beauty5.JPG" alt="橘エステ イメージ" />
+    </div>
+
+    <div class="header-content">
+      <img src="beauty1.JPG" alt="ロゴ" />
+      <h1>橘エステ</h1>
+    </div>
+  </header>
+
+  <main>
+    <h2>MENU</h2>
+
+    <h3>Body</h3>
+
+    <div class="menu-item">
+      <h4>漢方アロマオイルトリートメント</h4>
+      <small>（背中 / ヒップ / 脚 / お腹 / 腕 / デコルテ / ヘッド）</small>
+      <p>
+        凝り固まった筋肉をじんわりほぐすツボと、
+        ハワイアンロミロミを融合させた mehana オリジナルメニュー。
+        漢方アロマを使用し、心身ともに深いリラックスへ導きます。
+      </p>
+      <p class="price">90min ¥11,000 / 120min ¥13,200</p>
+    </div>
+
+    <div class="menu-item">
+      <h4>ベッドストレッチ × 揉みほぐし（リピーター様限定）</h4>
+      <small>お着替え不要</small>
+      <p>
+        ツボ押しと指圧でお身体をほぐしながら、
+        ご自身では伸ばしにくい部分まで丁寧にストレッチしていきます。
+      </p>
+      <p class="price">60min ¥6,600</p>
+    </div>
+
+    <div class="menu-item">
+      <h4>漢方アロマオイルトリートメント（ショート）</h4>
+      <p>時間がない方におすすめのコースです。</p>
+      <p class="price">70min ¥8,800</p>
+    </div>
+
+    <div class="menu-item">
+      <h4>よもぎ蒸し</h4>
+      <p>
+        ハーブの女王と呼ばれるよもぎと数種類のハーブをブレンド。
+        蒸気で下半身から温め、香りによるリラックス効果も高めます。
+      </p>
+      <p class="price">40min ¥4,400（1ヶ月以内のご予約で¥500 OFF）</p>
+    </div>
+
+    <div class="menu-item">
+      <h4>おまかせコース</h4>
+      <p>
+        お疲れやお好みに合わせて、
+        漢方アロマオイルケア・フェイシャル・ベッドストレッチ・
+        ヘッドマッサージを組み合わせます。
+      </p>
+      <p class="price">150min ¥18,700 / 180min ¥22,000</p>
+    </div>
+
+    <h2>営業時間</h2>
+    <div class="info-content">
+      <p>10:00 〜 17:00</p>
+    </div>
+
+    <h2>定休日</h2>
+    <div class="info-content">
+      <p>月曜日 ・ 火曜日</p>
+    </div>
+
+    <h2>支払い方法</h2>
+    <div class="info-content">
+      <p>現金 / PayPay</p>
+    </div>
+
+    <h2>駐車場</h2>
+    <div class="info-content">
+      <p>駐車場あり（大きい車も安心）</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <a href="https://www.instagram.com/ta_susu_2" target="_blank" class="insta-icon">
+    <img src="Instagram.png" alt="Instagram" style="width: 50px; height: 50px; object-fit: cover;">
+</a>
+
+    <p>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+        Instagramはこちら
+      </a>
+    </p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>
