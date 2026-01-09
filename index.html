@@ -231,3 +231,83 @@
         ご自身では伸ばしにくい部分まで丁寧にストレッチしていきます。
       </p>
       <p class="price">60min ¥6,600</p>
+    </div>
+
+    <div class="menu-item">
+      <h4>漢方アロマオイルトリートメント（ショート）</h4>
+      <p>時間がない方におすすめのコースです。</p>
+      <p class="price">70min ¥8,800</p>
+    </div>
+
+    <div class="menu-item">
+      <h4>よもぎ蒸し</h4>
+      <p>
+        ハーブの女王と呼ばれるよもぎと数種類のハーブをブレンド。
+        蒸気で下半身から温め、香りによるリラックス効果も高めます。
+      </p>
+      <p class="price">40min ¥4,400<br><span style="font-size: 0.8rem; font-weight: normal;">（1ヶ月以内のご予約で¥500 OFF）</span></p>
+    </div>
+
+    <div class="menu-item">
+      <h4>おまかせコース</h4>
+      <p>
+        お疲れやお好みに合わせて、
+        漢方アロマオイルケア・フェイシャル・ベッドストレッチ・
+        ヘッドマッサージを組み合わせます。
+      </p>
+      <p class="price">150min ¥18,700 / 180min ¥22,000</p>
+    </div>
+
+    <h2>INFO</h2> <div style="margin-bottom: 20px;">
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">営業時間</h4>
+      <div class="info-content">
+        <p>10:00 〜 17:00</p>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">定休日</h4>
+      <div class="info-content">
+        <p>月曜日 ・ 火曜日</p>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">支払い方法</h4>
+      <div class="info-content">
+        <p>現金 / PayPay</p>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">駐車場</h4>
+      <div class="info-content">
+        <p>駐車場あり（大きい車も安心）</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <a href="https://www.instagram.com/ta_susu_2" target="_blank" rel="noopener" class="insta-link-block">
+      <img src="Instagram.png" alt="Instagram" class="insta-icon-img">
+      <span class="insta-text">Instagramはこちら</span>
+    </a>
+    <p style="font-size: 0.7rem; margin-top: 30px; opacity: 0.6;">&copy; 橘エステ All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    if(slides.length > 0) {
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>
