@@ -13,13 +13,13 @@
       color: #333;
       background: #fafafa;
       line-height: 1.6;
-      -webkit-text-size-adjust: 100%; /* iOSのテキストサイズ自動調整を防止 */
+      -webkit-text-size-adjust: 100%;
     }
 
     /* ===== Header ===== */
     header {
       position: relative;
-      height: 60vh; /* スマホで見やすいよう少し低めに調整 */
+      height: 60vh;
       overflow: hidden;
     }
 
@@ -46,7 +46,7 @@
       gap: 10px;
       background: rgba(255, 255, 255, 0.9);
       padding: 8px 14px;
-      border-radius: 50px; /* より丸みを持たせてモダンに */
+      border-radius: 50px;
       z-index: 10;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
@@ -69,7 +69,7 @@
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 40px 16px; /* 左右の余白をスマホ用に調整 */
+      padding: 40px 16px;
     }
 
     h2 {
@@ -83,7 +83,6 @@
       justify-content: center;
     }
 
-    /* 見出しに少し装飾を追加 */
     h2::before, h2::after {
       content: "";
       flex: 1;
@@ -99,7 +98,7 @@
     h3 {
       margin-top: 40px;
       font-size: 1.2rem;
-      border-left: 4px solid #d4a373; /* アクセントカラーの線 */
+      border-left: 4px solid #d4a373;
       padding-left: 12px;
       margin-bottom: 20px;
     }
@@ -137,11 +136,11 @@
       padding-top: 10px;
       border-top: 1px dashed #eee;
       font-weight: bold;
-      color: #d4a373; /* 金額を目立たせる色 */
+      color: #d4a373;
       font-size: 1rem;
     }
 
-    /* ===== Info Content (営業時間など) ===== */
+    /* ===== Info Content ===== */
     .info-content {
       text-align: center;
       font-size: 1.1rem;
@@ -168,7 +167,7 @@
     }
 
     .insta-link-block:active {
-      transform: scale(0.95); /* タップした時に少し沈む演出 */
+      transform: scale(0.95);
     }
 
     .insta-icon-img {
@@ -183,7 +182,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* PCなど広い画面用の微調整 */
     @media (min-width: 601px) {
       header { height: 75vh; }
       .header-content { top: 30px; left: 30px; padding: 10px 20px; }
@@ -258,29 +256,55 @@
       <p class="price">150min ¥18,700 / 180min ¥22,000</p>
     </div>
 
-    <h2>INFO</h2> <div style="margin-bottom: 20px;">
-      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">営業時間</h4>
+    <h3>Facial</h3>
+
+    <div class="menu-item">
+      <h4>肌育ボンバーフェイシャル <span style="color: #e63946; font-size: 0.8rem; vertical-align: middle;">★人気No.1</span></h4>
+      <small>(フェイシャル・ヘッド・肩首・デコルテ・腕・お腹)</small>
+      <p>
+        栄養をたっぷり与えて血流を良くし、自分の細胞の力で美しいお肌を育てていく「肌育ボンバーフェイシャル」。美筋整顔マッサージで小顔効果も🎵
+      </p>
+      <p class="price">
+        120min ¥15,400<br>
+        <span style="color: #d4a373;">初回価格 ¥11,000</span><br>
+        <span style="font-size: 0.85rem; font-weight: normal; color: #888;">※2ヶ月以内のご予約で20%off</span>
+      </p>
+    </div>
+
+    <div class="menu-item">
+      <h4>ツヤ肌ふんわりフェイシャル</h4>
+      <small>クレンジング→洗顔→鼻の毛穴ケア→ヘッド&デコルテフェイシャルマッサージ→肌トラブル別美容液導入→鎮静パック→腕・フットマッサージ→お仕上げ</small>
+      <p>
+        マッサージ中心なのでリラックスしながら受けられるフェイシャル。ヘッドからしっかり緩めていきます。敏感肌の方や、お時間のない方におすすめです。
+      </p>
+      <p class="price">70min ¥8,800</p>
+    </div>
+
+    <h2>INFO</h2> 
+    
+    <div style="margin-bottom: 20px;">
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 1.3rem; color: #888;">営業時間</h4>
       <div class="info-content">
         <p>10:00 〜 17:00</p>
       </div>
     </div>
 
     <div style="margin-bottom: 20px;">
-      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">定休日</h4>
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 1.3rem; color: #888;">定休日</h4>
       <div class="info-content">
         <p>月曜日 ・ 火曜日</p>
       </div>
     </div>
 
     <div style="margin-bottom: 20px;">
-      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">支払い方法</h4>
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 1.3rem; color: #888;">支払い方法</h4>
       <div class="info-content">
         <p>現金 / PayPay</p>
       </div>
     </div>
 
     <div style="margin-bottom: 20px;">
-      <h4 style="text-align: center; margin-bottom: 10px; font-size: 0.9rem; color: #888;">駐車場</h4>
+      <h4 style="text-align: center; margin-bottom: 10px; font-size: 1.3rem; color: #888;">駐車場</h4>
       <div class="info-content">
         <p>駐車場あり（大きい車も安心）</p>
       </div>
