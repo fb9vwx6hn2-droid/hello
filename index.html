@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>橘エステ</title>
+  <title>mehana</title>
 
   <style>
     /* 基本設定 */
@@ -159,26 +159,37 @@
       text-align: center;
     }
 
-    .insta-link-block {
-      text-decoration: none;
-      color: #fff;
-      display: inline-block;
-      transition: transform 0.2s;
-    }
-
-    .insta-link-block:active {
-      transform: scale(0.95);
-    }
-
-    .insta-icon-img {
-      width: 60px;
-      height: 60px;
+    /* SNSボタンを横に並べる箱 */
+    .sns-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* ボタン同士の間隔 */
       margin-bottom: 10px;
     }
 
-    .insta-text {
+    .sns-link-block {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      flex-direction: column; /* アイコンと文字を縦に並べる */
+      align-items: center;
+      transition: transform 0.2s;
+    }
+
+    .sns-link-block:active {
+      transform: scale(0.9);
+    }
+
+    .sns-icon-img {
+      width: 55px;  /* スマホで押しやすいサイズ */
+      height: 55px;
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+
+    .sns-text {
       display: block;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       letter-spacing: 0.05em;
     }
 
@@ -201,7 +212,7 @@
 
     <div class="header-content">
       <img src="beauty1.JPG" alt="ロゴ" />
-      <h1>橘エステ</h1>
+      <h1>mehana</h1>
     </div>
   </header>
 
@@ -285,21 +296,21 @@
     <div style="margin-bottom: 20px;">
       <h4 style="text-align: center; margin-bottom: 10px; font-size: 1.3rem; color: #888;">営業時間</h4>
       <div class="info-content">
-        <p>10:00 〜 17:00</p>
+        <p>10:00 〜 16:30</p>
       </div>
     </div>
 
     <div style="margin-bottom: 20px;">
       <h4 style="text-align: center; margin-bottom: 10px; font-size: 1.3rem; color: #888;">定休日</h4>
       <div class="info-content">
-        <p>月曜日 ・ 火曜日</p>
+        <p>不定休</p>
       </div>
     </div>
 
     <div style="margin-bottom: 20px;">
       <h4 style="text-align: center; margin-bottom: 10px; font-size: 1.3rem; color: #888;">支払い方法</h4>
       <div class="info-content">
-        <p>現金 / PayPay</p>
+        <p>現金のみ</p>
       </div>
     </div>
 
@@ -313,11 +324,21 @@
   </main>
 
   <footer>
-    <a href="https://www.instagram.com/yuumi_mehana" target="_blank" rel="noopener" class="insta-link-block">
-      <img src="Instagram.png" alt="Instagram" class="insta-icon-img">
-      <span class="insta-text">Instagramはこちら</span>
-    </a>
-    <p style="font-size: 0.7rem; margin-top: 30px; opacity: 0.6;">&copy; 橘エステ All Rights Reserved.</p>
+    <p class="sns-guide">ご予約はInstagramのDM、<br>またはLINEからお願いします</p>
+
+    <div class="sns-container">
+      <a href="https://www.instagram.com/yuumi_mehana" target="_blank" rel="noopener" class="sns-link-block">
+        <img src="Instagram.png" alt="Instagram" class="sns-icon-img">
+        <span class="sns-text">Instagram</span>
+      </a>
+
+      <a href="https://line.me/R/ti/p/@323dhrqd" target="_blank" rel="noopener" class="sns-link-block">
+        <img src="LINE.png" alt="LINE" class="sns-icon-img">
+        <span class="sns-text">LINE</span>
+      </a>
+    </div>
+    
+    <p style="font-size: 0.7rem; margin-top: 40px; opacity: 0.5;">&copy; 橘エステ All Rights Reserved.</p>
   </footer>
 
   <script>
